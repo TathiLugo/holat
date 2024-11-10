@@ -1,0 +1,24 @@
+html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Nombre</title>
+    <script>
+        function mostrarNombre() {
+            var nombre = document.getElementById("nombre").value;
+            document.getElementById("resultado").innerHTML = "Hola, " + nombre + " (≽^•⩊•^≼)୭ miau!";
+        }
+    </script>
+</head>
+<body>
+    <h1>Ingresa tu nombre</h1>
+    <form onsubmit="event.preventDefault(); mostrarNombre();">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required>
+        <button type="submit">Enviar</button>
+    </form>
+    <h2 id="resultado"></h2>
+</body>
+</html>
